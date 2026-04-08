@@ -1,0 +1,39 @@
+2026-02-16 12:32:50,949 - INFO - ================================================================================
+2026-02-16 12:32:50,950 - INFO - Starting column extraction from: InstrumentsConsolidatedFile_20260213_1_20260216_120623.csv
+2026-02-16 12:32:50,950 - INFO - ================================================================================
+2026-02-16 12:32:50,950 - INFO - Reading input CSV file...
+2026-02-16 12:32:50,951 - INFO - Detected metadata header: Status do Arquivo: Final
+2026-02-16 12:32:50,952 - INFO - Detected delimiter: ';' (count in header: 51)
+2026-02-16 12:32:50,954 - WARNING - Failed with encoding utf-8: 'utf-8' codec can't decode byte 0xc1 in position 955: invalid start byte
+2026-02-16 12:32:52,438 - INFO - Successfully read file with encoding: latin-1, delimiter: ';'
+2026-02-16 12:32:52,439 - INFO - Input file contains 104,100 rows and 52 columns
+2026-02-16 12:32:52,440 - INFO - First 10 columns: ['RptDt', 'TckrSymb', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'XprtnDt', 'XprtnCd', 'TradgStartDt']
+2026-02-16 12:32:52,619 - INFO - Applying filters...
+2026-02-16 12:32:52,692 - INFO - Filter 1 (SctyCtgyNm contains 'BDR'): 104,100 => 2,855 rows (101,245 removed)
+2026-02-16 12:32:52,695 - INFO - Filter 2 (SpcfctnCd starts with 'DR2' or 'DR3'): 2,855 => 19 rows (2,836 removed)
+2026-02-16 12:32:52,695 - INFO - ================================================================================
+2026-02-16 12:32:52,695 - INFO - FILTERING SUMMARY:
+2026-02-16 12:32:52,695 - INFO -   Original rows:  104,100
+2026-02-16 12:32:52,695 - INFO -   Filtered rows:  19
+2026-02-16 12:32:52,695 - INFO -   Removed rows:   104,081
+2026-02-16 12:32:52,696 - INFO -   Retention rate: 0.02%
+2026-02-16 12:32:52,697 - INFO - ================================================================================
+2026-02-16 12:32:52,761 - WARNING - Missing columns: ['ConvsBsBldr']
+2026-02-16 12:32:52,761 - INFO - Available columns: ['RptDt', 'TckrSymb', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'XprtnDt', 'XprtnCd', 'TradgStartDt', 'TradgEndDt', 'BaseCd', 'ConvsCritNm', 'MtrtyDtTrgtPt', 'ReqrdConvsInd', 'ISIN', 'CFICd', 'DlvryNtceStartDt', 'DlvryNtceEndDt', 'OptnTp', 'CtrctMltplr', 'AsstQtnQty', 'AllcnRndLot', 'TradgCcy', 'DlvryTpNm', 'WdrwlDays', 'WrkgDays', 'ClnrDays', 'RlvrBasePricNm', 'OpngFutrPosDay', 'SdTpCd1', 'UndrlygTckrSymb1', 'SdTpCd2', 'UndrlygTckrSymb2', 'PureGoldWght', 'ExrcPric', 'OptnStyle', 'ValTpNm', 'PrmUpfrntInd', 'OpngPosLmtDt', 'DstrbtnId', 'PricFctr', 'DaysToSttlm', 'SrsTpNm', 'PrtcnFlg', 'AutomtcExrcInd', 'SpcfctnCd', 'CrpnNm', 'CorpActnStartDt', 'CtdyTrtmntTpNm', 'MktCptlstn', 'CorpGovnLvlNm']
+2026-02-16 12:32:52,761 - WARNING - Cannot extract 1 missing columns: ['ConvsBsBldr']
+2026-02-16 12:32:52,762 - INFO - Proceeding with available columns only
+2026-02-16 12:32:52,762 - INFO - Extracting 15 columns: ['TckrSymb', 'ISIN', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'SpcfctnCd', 'XprtnDt', 'XprtnCd', 'TradgStartDt', 'TradgEndDt', 'BaseCd', 'CrpnNm', 'CorpGovnLvlNm']
+2026-02-16 12:32:52,767 - INFO - Non-null values per column:
+2026-02-16 12:32:52,767 - INFO -   TckrSymb: 19 / 19 rows
+2026-02-16 12:32:52,768 - INFO -   ISIN: 19 / 19 rows
+2026-02-16 12:32:52,768 - INFO -   Asst: 19 / 19 rows
+2026-02-16 12:32:52,768 - INFO -   AsstDesc: 19 / 19 rows
+2026-02-16 12:32:52,768 - INFO -   SgmtNm: 19 / 19 rows
+2026-02-16 12:32:52,770 - INFO - After removing all-null rows: 19 rows remain
+2026-02-16 12:32:52,770 - INFO - Writing output to: InstrumentsConsolidated_filtered_20260216_123252.csv
+2026-02-16 12:32:52,770 - INFO - Using delimiter: ';'
+2026-02-16 12:32:52,779 - INFO - Successfully created output file (2,280 bytes)
+2026-02-16 12:32:52,779 - INFO - Output contains 19 rows and 15 columns
+2026-02-16 12:32:52,780 - INFO - ================================================================================
+2026-02-16 12:32:52,780 - INFO - Extraction completed SUCCESSFULLY
+2026-02-16 12:32:52,780 - INFO - ================================================================================

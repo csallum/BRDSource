@@ -1,0 +1,336 @@
+2026-02-10 16:36:36,390 - INFO - Scheduler initialized
+2026-02-10 16:36:36,391 - INFO - Download job scheduled for 21:00 (9pm) UK time daily
+2026-02-10 16:36:36,391 - INFO - Press Ctrl+C to stop
+2026-02-10 16:36:36,391 - INFO - Running initial download on startup...
+2026-02-10 16:36:36,392 - INFO - ================================================================================
+2026-02-10 16:36:36,393 - INFO - Starting ANBIMA download job at 2026-02-10 16:36:36 GMT
+2026-02-10 16:36:36,393 - INFO - ================================================================================
+2026-02-10 16:36:36,393 - INFO - Fetching ANBIMA page: https://www.anbima.com.br/pt_br/informar/sistema-anbima-de-registro/cadastro-de-instrumentos.htm
+2026-02-10 16:36:38,101 - ERROR - Failed to fetch ANBIMA page: 404 Client Error: Not Found for url: https://www.anbima.com.br/pt_br/informar/sistema-anbima-de-registro/cadastro-de-instrumentos.htm
+2026-02-10 16:36:38,105 - ERROR - Failed to find download URL
+2026-02-10 16:36:38,105 - INFO - Job completed with FAILURE
+2026-02-10 16:39:03,919 - INFO - 
+Scheduler stopped by user
+2026-02-10 16:39:04,885 - INFO - Scheduler initialized
+2026-02-10 16:39:04,886 - INFO - Download job scheduled for 21:00 (9pm) UK time daily
+2026-02-10 16:39:04,886 - INFO - Press Ctrl+C to stop
+2026-02-10 16:39:04,887 - INFO - Running initial download on startup...
+2026-02-10 16:39:04,887 - INFO - ================================================================================
+2026-02-10 16:39:04,887 - INFO - Starting ANBIMA download job at 2026-02-10 16:39:04 GMT
+2026-02-10 16:39:04,887 - INFO - ================================================================================
+2026-02-10 16:39:04,888 - INFO - Fetching ANBIMA page: https://arquivos.b3.com.br/#
+2026-02-10 16:39:05,367 - WARNING - No suitable file link found on page
+2026-02-10 16:39:05,370 - ERROR - Failed to find download URL
+2026-02-10 16:39:05,370 - INFO - Job completed with FAILURE
+2026-02-13 17:27:45,361 - INFO - Scheduler initialized
+2026-02-13 17:27:45,361 - INFO - Download job scheduled for 21:00 (9pm) UK time daily
+2026-02-13 17:27:45,362 - INFO - Press Ctrl+C to stop
+2026-02-13 17:27:45,362 - INFO - Running initial download on startup...
+2026-02-13 17:27:45,363 - INFO - ================================================================================
+2026-02-13 17:27:45,363 - INFO - Starting ANBIMA download job at 2026-02-13 17:27:45 GMT
+2026-02-13 17:27:45,363 - INFO - ================================================================================
+2026-02-13 17:27:45,363 - INFO - Fetching ANBIMA page: https://arquivos.b3.com.br/#
+2026-02-13 17:27:48,687 - WARNING - No suitable file link found on page
+2026-02-13 17:27:48,688 - ERROR - Failed to find download URL
+2026-02-13 17:27:48,689 - INFO - Job completed with FAILURE
+2026-02-16 10:54:41,234 - INFO - Scheduler initialized
+2026-02-16 10:54:41,235 - INFO - Download job scheduled for 21:00 (9pm) UK time daily
+2026-02-16 10:54:41,235 - INFO - Press Ctrl+C to stop
+2026-02-16 10:54:41,236 - INFO - Running initial download on startup...
+2026-02-16 10:54:41,236 - INFO - ================================================================================
+2026-02-16 10:54:41,236 - INFO - Starting ANBIMA download job at 2026-02-16 10:54:41 GMT
+2026-02-16 10:54:41,236 - INFO - ================================================================================
+2026-02-16 10:54:41,237 - INFO - Checking for file: https://arquivos.b3.com.br/tabelas/InstrumentsConsolidated/2026-02-16
+2026-02-16 10:54:41,746 - INFO - Found available file for date: 2026-02-16
+2026-02-16 10:54:41,749 - INFO - Downloading file from: https://arquivos.b3.com.br/tabelas/InstrumentsConsolidated/2026-02-16
+2026-02-16 10:54:42,184 - INFO - Successfully downloaded: InstrumentsConsolidated_2026-02-16_20260216_105442.xlsx (5,953 bytes)
+2026-02-16 10:54:42,186 - INFO - Job completed SUCCESSFULLY
+2026-02-16 10:54:42,186 - INFO - ================================================================================
+2026-02-16 11:27:22,260 - INFO - Instruments extractor module loaded successfully
+2026-02-16 11:27:22,260 - INFO - Scheduler initialized
+2026-02-16 11:27:22,261 - INFO - Download job scheduled for 21:00 (9pm) UK time daily
+2026-02-16 11:27:22,261 - INFO - Press Ctrl+C to stop
+2026-02-16 11:27:22,261 - INFO - Running initial download on startup...
+2026-02-16 11:27:22,261 - INFO - ================================================================================
+2026-02-16 11:27:22,261 - INFO - Starting ANBIMA download job at 2026-02-16 11:27:22 GMT
+2026-02-16 11:27:22,261 - INFO - ================================================================================
+2026-02-16 11:27:22,262 - INFO - Checking for file: https://arquivos.b3.com.br/tabelas/InstrumentsConsolidated/2026-02-16
+2026-02-16 11:27:22,914 - INFO - Found available file for date: 2026-02-16
+2026-02-16 11:27:22,916 - INFO - Downloading file from: https://arquivos.b3.com.br/tabelas/InstrumentsConsolidated/2026-02-16
+2026-02-16 11:27:23,452 - INFO - Successfully downloaded: InstrumentsConsolidated_2026-02-16_20260216_112723.xlsx (5,953 bytes)
+2026-02-16 11:27:23,454 - INFO - Download completed SUCCESSFULLY
+2026-02-16 11:27:23,455 - INFO - ================================================================================
+2026-02-16 11:27:23,455 - INFO - Starting automatic column extraction
+2026-02-16 11:27:23,455 - INFO - ================================================================================
+2026-02-16 11:27:23,456 - INFO - ================================================================================
+2026-02-16 11:27:23,456 - INFO - Starting column extraction from: InstrumentsConsolidated_2026-02-16_20260216_112723.xlsx
+2026-02-16 11:27:23,456 - INFO - ================================================================================
+2026-02-16 11:27:23,457 - INFO - Reading input CSV file...
+2026-02-16 11:27:23,469 - INFO - Successfully read file with encoding: utf-8
+2026-02-16 11:27:23,469 - INFO - Input file contains 0 rows and 128 columns
+2026-02-16 11:27:23,472 - INFO - Applying filters...
+2026-02-16 11:27:23,472 - WARNING - Column 'SctyCtgyNm' not found - skipping security category filter
+2026-02-16 11:27:23,473 - WARNING - Column 'SpcfctnCd' not found - skipping specification code filter
+2026-02-16 11:27:23,473 - INFO - ================================================================================
+2026-02-16 11:27:23,474 - INFO - FILTERING SUMMARY:
+2026-02-16 11:27:23,474 - INFO -   Original rows:  0
+2026-02-16 11:27:23,474 - INFO -   Filtered rows:  0
+2026-02-16 11:27:23,475 - INFO -   Removed rows:   0
+2026-02-16 11:27:23,475 - ERROR - Error during extraction: division by zero
+2026-02-16 11:27:23,475 - INFO - Extraction completed with FAILURE
+2026-02-16 11:27:23,476 - ERROR - Extraction failed - check extractor logs
+2026-02-16 11:27:23,477 - WARNING - Download successful but extraction failed
+2026-02-16 11:27:23,477 - INFO - ================================================================================
+2026-02-16 11:40:08,955 - INFO - Instruments extractor module loaded successfully
+2026-02-16 11:40:08,955 - INFO - ================================================================================
+2026-02-16 11:40:08,956 - INFO - Starting B3 Instruments download job at 2026-02-16 11:40:08 GMT
+2026-02-16 11:40:08,956 - INFO - ================================================================================
+2026-02-16 11:40:08,957 - INFO - Requesting download token for date: 2026-02-16
+2026-02-16 11:40:10,687 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-16&recaptchaToken=
+2026-02-16 11:40:10,689 - INFO - File not available for 2026-02-16
+2026-02-16 11:40:10,689 - INFO - Requesting download token for date: 2026-02-15
+2026-02-16 11:40:11,199 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-15&recaptchaToken=
+2026-02-16 11:40:11,202 - INFO - File not available for 2026-02-15
+2026-02-16 11:40:11,203 - INFO - Requesting download token for date: 2026-02-14
+2026-02-16 11:40:11,695 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-14&recaptchaToken=
+2026-02-16 11:40:11,697 - INFO - File not available for 2026-02-14
+2026-02-16 11:40:11,698 - INFO - Requesting download token for date: 2026-02-13
+2026-02-16 11:40:12,184 - INFO - Received token for file: InstrumentsConsolidatedFile_20260213_1.csv
+2026-02-16 11:40:12,185 - INFO - Found available file for date: 2026-02-13
+2026-02-16 11:40:12,186 - INFO - Downloading file: InstrumentsConsolidatedFile_20260213_1.csv
+2026-02-16 11:40:12,186 - INFO - Download URL: https://arquivos.b3.com.br/api/download/?token=c2NRRDdyd0NWKzVNMTNKU3lnckZCUT09NUs2YmNZNnhwY2k5S01jRWxSYjJTcHlvNTJ5L0JHdHFVU3RyaVBMUlU1Z3RjeExSVzhmNE9USEpFbmRUVXluZEhZcExEMVArNUwrcHpEQmVYbG5qaXB3a1M3R29Td3dkQ093aE1rR3dwUFV5YVhFWFZsaXc5YnNYdVhuZE56aTVlT3VaRWdkY2YwMitCbXZwanJtZS9VWFl3MG9FM0NTTzEvRFNGRzV0b1lpSmZ3OExUSFdhcmp2UmJBVzZRWFp2RWhOVmFYWWxmb1pqb2E5REUzRnUzSjN3Ym1qVklPZVpldktqY1R6ZWNic3FwMXdFV3BLRUxiSS94aTB0S016VDBJZ3R5M3NGU084NmVKQVU3VC9kV1E9PQ
+2026-02-16 11:41:40,798 - INFO - Successfully downloaded: InstrumentsConsolidatedFile_20260213_1_20260216_114012.csv (23,498,933 bytes)
+2026-02-16 11:41:40,802 - INFO - Download completed SUCCESSFULLY
+2026-02-16 11:41:40,803 - INFO - ================================================================================
+2026-02-16 11:41:40,803 - INFO - Starting automatic column extraction
+2026-02-16 11:41:40,803 - INFO - ================================================================================
+2026-02-16 11:41:40,804 - INFO - ================================================================================
+2026-02-16 11:41:40,805 - INFO - Starting column extraction from: InstrumentsConsolidatedFile_20260213_1_20260216_114012.csv
+2026-02-16 11:41:40,805 - INFO - ================================================================================
+2026-02-16 11:41:40,806 - INFO - Reading input CSV file...
+2026-02-16 11:41:40,824 - ERROR - Error during extraction: Error tokenizing data. C error: Expected 1 fields in line 64, saw 2
+
+2026-02-16 11:41:40,825 - INFO - Extraction completed with FAILURE
+2026-02-16 11:41:40,825 - ERROR - Extraction failed - check extractor logs
+2026-02-16 11:41:40,826 - WARNING - Download successful but extraction failed
+2026-02-16 11:41:40,826 - INFO - ================================================================================
+2026-02-16 11:49:26,506 - INFO - Instruments extractor module loaded successfully
+2026-02-16 11:49:26,507 - INFO - ================================================================================
+2026-02-16 11:49:26,507 - INFO - Starting B3 Instruments download job at 2026-02-16 11:49:26 GMT
+2026-02-16 11:49:26,507 - INFO - ================================================================================
+2026-02-16 11:49:26,507 - INFO - Requesting download token for date: 2026-02-16
+2026-02-16 11:49:27,095 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-16&recaptchaToken=
+2026-02-16 11:49:27,098 - INFO - File not available for 2026-02-16
+2026-02-16 11:49:27,099 - INFO - Requesting download token for date: 2026-02-15
+2026-02-16 11:49:27,570 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-15&recaptchaToken=
+2026-02-16 11:49:27,573 - INFO - File not available for 2026-02-15
+2026-02-16 11:49:27,573 - INFO - Requesting download token for date: 2026-02-14
+2026-02-16 11:49:28,080 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-14&recaptchaToken=
+2026-02-16 11:49:28,083 - INFO - File not available for 2026-02-14
+2026-02-16 11:49:28,084 - INFO - Requesting download token for date: 2026-02-13
+2026-02-16 11:49:28,631 - INFO - Received token for file: InstrumentsConsolidatedFile_20260213_1.csv
+2026-02-16 11:49:28,633 - INFO - Found available file for date: 2026-02-13
+2026-02-16 11:49:28,634 - INFO - Downloading file: InstrumentsConsolidatedFile_20260213_1.csv
+2026-02-16 11:49:28,634 - INFO - Download URL: https://arquivos.b3.com.br/api/download/?token=U0o0TjdrbU5IL1RpNThJdHYrK3VaZz09SnBzbGVML09vMEplMTc2RzFlbHUwRDNSRWZDYW91YUMyR3lwcVhXQndFaGZhcEdRS0Z4YW42R05oSjRyNXQ3emVIbW5GMTVCNndhL1FydFlKWE5Vd2JNNVEyV2dsOStnek5OK3pQTU5tMEQrMjVDcGV5TnJadWhPYzJKMW1iNS9waWZYTnNWMzFyWWVwUWdzU3poNm8zbm8xKzl3RjFpZ0RnNThJb2x1RlpGVmt4QjNOVEErb3UrOWlVeXFvS2lFb3JFbGNrS1Z2eVBBQXJnelExN0JvQkttazZOQm9teUw1Y3JBME1yN1dNdHdFb1ZRTUI3dlJlWTBsbXJMOWZoWXBCbVMrUUxCU3JVVUxicUtsK3A2YXc9PQ
+2026-02-16 11:50:46,008 - INFO - Successfully downloaded: InstrumentsConsolidatedFile_20260213_1_20260216_114929.csv (23,498,933 bytes)
+2026-02-16 11:50:46,010 - INFO - Download completed SUCCESSFULLY
+2026-02-16 11:50:46,011 - INFO - ================================================================================
+2026-02-16 11:50:46,011 - INFO - Starting automatic column extraction
+2026-02-16 11:50:46,011 - INFO - ================================================================================
+2026-02-16 11:50:46,012 - INFO - ================================================================================
+2026-02-16 11:50:46,012 - INFO - Starting column extraction from: InstrumentsConsolidatedFile_20260213_1_20260216_114929.csv
+2026-02-16 11:50:46,012 - INFO - ================================================================================
+2026-02-16 11:50:46,012 - INFO - Reading input CSV file...
+2026-02-16 11:50:46,018 - INFO - Detected delimiter: ',' (count: 0)
+2026-02-16 11:50:46,018 - WARNING - Failed to read with encoding utf-8: The 'low_memory' option is not supported with the 'python' engine
+2026-02-16 11:50:46,019 - WARNING - Failed to read with encoding latin-1: The 'low_memory' option is not supported with the 'python' engine
+2026-02-16 11:50:46,019 - WARNING - Failed to read with encoding iso-8859-1: The 'low_memory' option is not supported with the 'python' engine
+2026-02-16 11:50:46,020 - WARNING - Failed to read with encoding cp1252: The 'low_memory' option is not supported with the 'python' engine
+2026-02-16 11:50:46,020 - ERROR - Failed to read CSV file with any encoding/parser combination
+2026-02-16 11:50:46,020 - INFO - Try running: python instruments_extractor.py diagnose <filepath>
+2026-02-16 11:50:46,021 - ERROR - Extraction failed - check extractor logs
+2026-02-16 11:50:46,021 - WARNING - Download successful but extraction failed
+2026-02-16 11:50:46,021 - INFO - ================================================================================
+2026-02-16 11:53:29,995 - INFO - Instruments extractor module loaded successfully
+2026-02-16 11:53:29,996 - INFO - ================================================================================
+2026-02-16 11:53:29,996 - INFO - Starting B3 Instruments download job at 2026-02-16 11:53:29 GMT
+2026-02-16 11:53:29,996 - INFO - ================================================================================
+2026-02-16 11:53:29,997 - INFO - Requesting download token for date: 2026-02-16
+2026-02-16 11:53:31,426 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-16&recaptchaToken=
+2026-02-16 11:53:31,429 - INFO - File not available for 2026-02-16
+2026-02-16 11:53:31,430 - INFO - Requesting download token for date: 2026-02-15
+2026-02-16 11:53:31,934 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-15&recaptchaToken=
+2026-02-16 11:53:31,937 - INFO - File not available for 2026-02-15
+2026-02-16 11:53:31,938 - INFO - Requesting download token for date: 2026-02-14
+2026-02-16 11:53:32,472 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-14&recaptchaToken=
+2026-02-16 11:53:32,475 - INFO - File not available for 2026-02-14
+2026-02-16 11:53:32,476 - INFO - Requesting download token for date: 2026-02-13
+2026-02-16 11:53:33,349 - INFO - Received token for file: InstrumentsConsolidatedFile_20260213_1.csv
+2026-02-16 11:53:33,351 - INFO - Found available file for date: 2026-02-13
+2026-02-16 11:53:33,352 - INFO - Downloading file: InstrumentsConsolidatedFile_20260213_1.csv
+2026-02-16 11:53:33,352 - INFO - Download URL: https://arquivos.b3.com.br/api/download/?token=dXY2UDluTUVFNTZhckxzQUo3UTMvdz09ZnNTbWFTMStLdkMvMVIxU05QYkRubUtqZWFCKytNaWdQb1hKNnBWd0h3RG5sTGUzQ3ZLVVhZZ0NkTmx6VjZWMU5RYWltZWFZT0JBMk9Jb1lYaHE3NmRUamRaUGtLYkkxbzF6bzFoT3g3SlJWTFVWSDRsVklyTjk1dXRQSEpXeWxtZEtzWk04eXFjaWxzRGw3TnNhWlpNSFowdjBGLzBERVoxWVdWR01lMUNiS1o2UXNraFBBSjhRd2FTcEdZTGNLYk5udlpiLzU1a0ZFMzQvMnR4RHZlaEFja1Jxay9wZ010TDNhK3oxc3RFa1NaT3B4RXdhSFo1aXJNZlNFc1IxeHZTRGdwZ0F6TUY4WVRyZnBGcW91OEE9PQ
+2026-02-16 11:57:13,099 - INFO - Successfully downloaded: InstrumentsConsolidatedFile_20260213_1_20260216_115333.csv (23,498,933 bytes)
+2026-02-16 11:57:13,103 - INFO - Download completed SUCCESSFULLY
+2026-02-16 11:57:13,104 - INFO - ================================================================================
+2026-02-16 11:57:13,104 - INFO - Starting automatic column extraction
+2026-02-16 11:57:13,104 - INFO - ================================================================================
+2026-02-16 11:57:13,105 - INFO - ================================================================================
+2026-02-16 11:57:13,105 - INFO - Starting column extraction from: InstrumentsConsolidatedFile_20260213_1_20260216_115333.csv
+2026-02-16 11:57:13,106 - INFO - ================================================================================
+2026-02-16 11:57:13,107 - INFO - Reading input CSV file...
+2026-02-16 11:57:13,108 - INFO - Detected delimiter: ';' (total count in first 5 lines: 204)
+2026-02-16 11:57:15,878 - INFO - Successfully read file with encoding: latin-1, delimiter: ';'
+2026-02-16 11:57:15,878 - INFO - Input file contains 104,101 rows and 1 columns
+2026-02-16 11:57:15,880 - INFO - Applying filters...
+2026-02-16 11:57:15,880 - WARNING - Column 'SctyCtgyNm' not found - skipping security category filter
+2026-02-16 11:57:15,880 - WARNING - Column 'SpcfctnCd' not found - skipping specification code filter
+2026-02-16 11:57:15,880 - INFO - ================================================================================
+2026-02-16 11:57:15,881 - INFO - FILTERING SUMMARY:
+2026-02-16 11:57:15,881 - INFO -   Original rows:  104,101
+2026-02-16 11:57:15,881 - INFO -   Filtered rows:  104,101
+2026-02-16 11:57:15,881 - INFO -   Removed rows:   0
+2026-02-16 11:57:15,886 - INFO -   Retention rate: 100.00%
+2026-02-16 11:57:15,887 - INFO - ================================================================================
+2026-02-16 11:57:15,887 - WARNING - Missing columns: ['TckrSymb', 'ISIN', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'SpcfctnCd', 'XprtnDt', 'XprtnCd', 'TradgStartDt', 'TradgEndDt', 'BaseCd', 'ConvsBsBldr', 'CrpnNm', 'CorpGovnLvlNm']
+2026-02-16 11:57:15,888 - INFO - Available columns: ['Status do Arquivo: Final']
+2026-02-16 11:57:15,889 - WARNING - Cannot extract 16 missing columns
+2026-02-16 11:57:15,889 - INFO - Proceeding with available columns only
+2026-02-16 11:57:15,890 - INFO - Extracting 0 columns
+2026-02-16 11:57:15,893 - INFO - Writing output to: InstrumentsConsolidated_filtered_20260216_115715.csv
+2026-02-16 11:57:15,894 - INFO - Using delimiter: ';'
+2026-02-16 11:57:15,962 - INFO - Successfully created output file (208,204 bytes)
+2026-02-16 11:57:15,963 - INFO - Output contains 104,101 rows and 0 columns
+2026-02-16 11:57:15,963 - INFO - ================================================================================
+2026-02-16 11:57:15,963 - INFO - Extraction completed SUCCESSFULLY
+2026-02-16 11:57:15,964 - INFO - ================================================================================
+2026-02-16 11:57:16,009 - INFO - Extraction completed successfully: processed\InstrumentsConsolidated_filtered_20260216_115715.csv
+2026-02-16 11:57:16,010 - INFO - Full job completed SUCCESSFULLY (download + extraction)
+2026-02-16 11:57:16,010 - INFO - ================================================================================
+2026-02-16 12:06:21,319 - INFO - Instruments extractor module loaded successfully
+2026-02-16 12:06:21,320 - INFO - ================================================================================
+2026-02-16 12:06:21,321 - INFO - Starting B3 Instruments download job at 2026-02-16 12:06:21 GMT
+2026-02-16 12:06:21,321 - INFO - ================================================================================
+2026-02-16 12:06:21,321 - INFO - Requesting download token for date: 2026-02-16
+2026-02-16 12:06:21,895 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-16&recaptchaToken=
+2026-02-16 12:06:21,897 - INFO - File not available for 2026-02-16
+2026-02-16 12:06:21,897 - INFO - Requesting download token for date: 2026-02-15
+2026-02-16 12:06:22,467 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-15&recaptchaToken=
+2026-02-16 12:06:22,468 - INFO - File not available for 2026-02-15
+2026-02-16 12:06:22,469 - INFO - Requesting download token for date: 2026-02-14
+2026-02-16 12:06:22,938 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-14&recaptchaToken=
+2026-02-16 12:06:22,941 - INFO - File not available for 2026-02-14
+2026-02-16 12:06:22,941 - INFO - Requesting download token for date: 2026-02-13
+2026-02-16 12:06:23,416 - INFO - Received token for file: InstrumentsConsolidatedFile_20260213_1.csv
+2026-02-16 12:06:23,419 - INFO - Found available file for date: 2026-02-13
+2026-02-16 12:06:23,420 - INFO - Downloading file: InstrumentsConsolidatedFile_20260213_1.csv
+2026-02-16 12:06:23,420 - INFO - Download URL: https://arquivos.b3.com.br/api/download/?token=ckVhUVljQ0xoRmN5WGx5SUtqTGN2Zz09ZjZBemQ2N2J6Z2cvYXY2ZVhEN0R1aUxKVVRSZmZYdE5hYm9hQ0xBZFlVYjVwbmZsalhFWnFnTmxEN1duVXFvUFo3ekR0NHZDVnNvSFFQREM0cmJ0bkxnc3FhZkxVM3B6eDcyRnR5R09hdGpkTVBtWSt6cThyaTRvWm9oNnEwOXI2UVBYTmVVcmIrcDdMN3dPNm9yQ3ZlWlhPUCtWUmpkM3V2UW5Qa3Mxb1FZNGhpUDkxbUhsMFUvN25GK05DZi90Qm1NVStpUE1lc0NEZllLaWtXay9YZmRyc3Zhc1VjN2duVmhOZlN0M2dSa05NZ1FLNlhmVHY1blBrcmM1OXZJZ29nUW5aaFJqaDlYNU5jMGxtYmF0YlE9PQ
+2026-02-16 12:07:48,215 - INFO - Successfully downloaded: InstrumentsConsolidatedFile_20260213_1_20260216_120623.csv (23,498,933 bytes)
+2026-02-16 12:07:48,223 - INFO - Download completed SUCCESSFULLY
+2026-02-16 12:07:48,223 - INFO - ================================================================================
+2026-02-16 12:07:48,224 - INFO - Starting automatic column extraction
+2026-02-16 12:07:48,225 - INFO - ================================================================================
+2026-02-16 12:07:48,225 - INFO - ================================================================================
+2026-02-16 12:07:48,226 - INFO - Starting column extraction from: InstrumentsConsolidatedFile_20260213_1_20260216_120623.csv
+2026-02-16 12:07:48,227 - INFO - ================================================================================
+2026-02-16 12:07:48,227 - INFO - Reading input CSV file...
+2026-02-16 12:07:48,228 - INFO - Detected metadata header: Status do Arquivo: Final
+2026-02-16 12:07:48,229 - INFO - Detected delimiter: ';' (count in header: 51)
+2026-02-16 12:07:48,231 - WARNING - Failed with encoding utf-8: 'utf-8' codec can't decode byte 0xc1 in position 955: invalid start byte
+2026-02-16 12:07:49,838 - INFO - Successfully read file with encoding: latin-1, delimiter: ';'
+2026-02-16 12:07:49,839 - INFO - Input file contains 104,100 rows and 52 columns
+2026-02-16 12:07:49,839 - INFO - First 10 columns: ['RptDt', 'TckrSymb', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'XprtnDt', 'XprtnCd', 'TradgStartDt']
+2026-02-16 12:07:50,030 - INFO - Applying filters...
+2026-02-16 12:07:50,122 - INFO - ================================================================================
+2026-02-16 12:07:50,123 - INFO - FILTERING SUMMARY:
+2026-02-16 12:07:50,123 - INFO -   Original rows:  104,100
+2026-02-16 12:07:50,123 - INFO -   Filtered rows:  19
+2026-02-16 12:07:50,123 - INFO -   Removed rows:   104,081
+2026-02-16 12:07:50,123 - INFO -   Retention rate: 0.02%
+2026-02-16 12:07:50,123 - INFO - ================================================================================
+2026-02-16 12:07:50,179 - WARNING - Missing columns: ['ConvsBsBldr']
+2026-02-16 12:07:50,180 - INFO - Available columns: ['RptDt', 'TckrSymb', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'XprtnDt', 'XprtnCd', 'TradgStartDt', 'TradgEndDt', 'BaseCd', 'ConvsCritNm', 'MtrtyDtTrgtPt', 'ReqrdConvsInd', 'ISIN', 'CFICd', 'DlvryNtceStartDt', 'DlvryNtceEndDt', 'OptnTp', 'CtrctMltplr', 'AsstQtnQty', 'AllcnRndLot', 'TradgCcy', 'DlvryTpNm', 'WdrwlDays', 'WrkgDays', 'ClnrDays', 'RlvrBasePricNm', 'OpngFutrPosDay', 'SdTpCd1', 'UndrlygTckrSymb1', 'SdTpCd2', 'UndrlygTckrSymb2', 'PureGoldWght', 'ExrcPric', 'OptnStyle', 'ValTpNm', 'PrmUpfrntInd', 'OpngPosLmtDt', 'DstrbtnId', 'PricFctr', 'DaysToSttlm', 'SrsTpNm', 'PrtcnFlg', 'AutomtcExrcInd', 'SpcfctnCd', 'CrpnNm', 'CorpActnStartDt', 'CtdyTrtmntTpNm', 'MktCptlstn', 'CorpGovnLvlNm']
+2026-02-16 12:07:50,180 - WARNING - Cannot extract 1 missing columns: ['ConvsBsBldr']
+2026-02-16 12:07:50,180 - INFO - Proceeding with available columns only
+2026-02-16 12:07:50,181 - INFO - Extracting 15 columns: ['TckrSymb', 'ISIN', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'SpcfctnCd', 'XprtnDt', 'XprtnCd', 'TradgStartDt', 'TradgEndDt', 'BaseCd', 'CrpnNm', 'CorpGovnLvlNm']
+2026-02-16 12:07:50,184 - INFO - Non-null values per column:
+2026-02-16 12:07:50,184 - INFO -   TckrSymb: 19 / 19 rows
+2026-02-16 12:07:50,185 - INFO -   ISIN: 19 / 19 rows
+2026-02-16 12:07:50,185 - INFO -   Asst: 19 / 19 rows
+2026-02-16 12:07:50,185 - INFO -   AsstDesc: 19 / 19 rows
+2026-02-16 12:07:50,185 - INFO -   SgmtNm: 19 / 19 rows
+2026-02-16 12:07:50,187 - INFO - After removing all-null rows: 19 rows remain
+2026-02-16 12:07:50,187 - INFO - Writing output to: InstrumentsConsolidated_filtered_20260216_120750.csv
+2026-02-16 12:07:50,187 - INFO - Using delimiter: ';'
+2026-02-16 12:07:50,193 - INFO - Successfully created output file (2,280 bytes)
+2026-02-16 12:07:50,193 - INFO - Output contains 19 rows and 15 columns
+2026-02-16 12:07:50,193 - INFO - ================================================================================
+2026-02-16 12:07:50,194 - INFO - Extraction completed SUCCESSFULLY
+2026-02-16 12:07:50,194 - INFO - ================================================================================
+2026-02-16 12:07:50,196 - INFO - Extraction completed successfully: processed\InstrumentsConsolidated_filtered_20260216_120750.csv
+2026-02-16 12:07:50,197 - INFO - Full job completed SUCCESSFULLY (download + extraction)
+2026-02-16 12:07:50,197 - INFO - ================================================================================
+2026-02-16 12:39:34,754 - INFO - Instruments extractor module loaded successfully
+2026-02-16 12:39:34,755 - INFO - ================================================================================
+2026-02-16 12:39:34,755 - INFO - Starting B3 Instruments download job at 2026-02-16 12:39:34 GMT
+2026-02-16 12:39:34,756 - INFO - ================================================================================
+2026-02-16 12:39:34,756 - INFO - Requesting download token for date: 2026-02-16
+2026-02-16 12:39:35,446 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-16&recaptchaToken=
+2026-02-16 12:39:35,449 - INFO - File not available for 2026-02-16
+2026-02-16 12:39:35,452 - INFO - Requesting download token for date: 2026-02-15
+2026-02-16 12:39:36,170 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-15&recaptchaToken=
+2026-02-16 12:39:36,173 - INFO - File not available for 2026-02-15
+2026-02-16 12:39:36,174 - INFO - Requesting download token for date: 2026-02-14
+2026-02-16 12:39:36,705 - ERROR - Failed to get download token: 400 Client Error: Bad Request for url: https://arquivos.b3.com.br/api/download/requestname?fileName=InstrumentsConsolidatedFile&date=2026-02-14&recaptchaToken=
+2026-02-16 12:39:36,707 - INFO - File not available for 2026-02-14
+2026-02-16 12:39:36,707 - INFO - Requesting download token for date: 2026-02-13
+2026-02-16 12:39:37,438 - INFO - Received token for file: InstrumentsConsolidatedFile_20260213_1.csv
+2026-02-16 12:39:37,442 - INFO - Found available file for date: 2026-02-13
+2026-02-16 12:39:37,443 - INFO - Downloading file: InstrumentsConsolidatedFile_20260213_1.csv
+2026-02-16 12:39:37,443 - INFO - Download URL: https://arquivos.b3.com.br/api/download/?token=cmNhZHVvanpSZjdmbDQ5UEJyQWo4QT09WkQ4UVZodXZHa3k2SHRaZUJPSExWbExQanVSNzNCejhnOUVGT2lwdHc5dU9wcXk4RXV6K2FXV0VjZVMxQ0I5Y1cvbWE5L3pjcS9ScGMxc0xWL3RleXRmeWh3NXd5STNjY2pvRzBvbFdoM2FPMlBUL3prTnMyM1lsMUFxTGlFQ3l6UmZnbmdFTnIxalZlM1B6MkNEa2toRW5Xbk9ma2tldndLcGNzbi9EQWhJYTIwZzQraFlQMVRYMjJlQXBkYnJ2ckh4S0xKK0syUFl6ZEdXcjlSZWtqWmwveTR2WmQ5d0xNMWE0b21FM0cwVk4veklqZ3JHOTFIeUs2d3gxZTR0ZE11U0loOW9CMjNvdm1Sa3RUdUp5ZlE9PQ
+2026-02-16 12:42:54,635 - INFO - Successfully downloaded: InstrumentsConsolidatedFile_20260213_1_20260216_123938.csv (23,498,933 bytes)
+2026-02-16 12:42:54,638 - INFO - Download completed SUCCESSFULLY
+2026-02-16 12:42:54,638 - INFO - ================================================================================
+2026-02-16 12:42:54,639 - INFO - Starting automatic column extraction
+2026-02-16 12:42:54,639 - INFO - ================================================================================
+2026-02-16 12:42:54,640 - INFO - ================================================================================
+2026-02-16 12:42:54,640 - INFO - Starting column extraction from: InstrumentsConsolidatedFile_20260213_1_20260216_123938.csv
+2026-02-16 12:42:54,640 - INFO - ================================================================================
+2026-02-16 12:42:54,641 - INFO - Reading input CSV file...
+2026-02-16 12:42:54,642 - INFO - Detected metadata header: Status do Arquivo: Final
+2026-02-16 12:42:54,643 - INFO - Detected delimiter: ';' (count in header: 51)
+2026-02-16 12:42:54,647 - WARNING - Failed with encoding utf-8: 'utf-8' codec can't decode byte 0xc1 in position 955: invalid start byte
+2026-02-16 12:42:57,533 - INFO - Successfully read file with encoding: latin-1, delimiter: ';'
+2026-02-16 12:42:57,533 - INFO - Input file contains 104,100 rows and 52 columns
+2026-02-16 12:42:57,534 - INFO - First 10 columns: ['RptDt', 'TckrSymb', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'XprtnDt', 'XprtnCd', 'TradgStartDt']
+2026-02-16 12:42:57,904 - INFO - Applying filters...
+2026-02-16 12:42:58,013 - INFO - Filter 1 (SctyCtgyNm contains 'BDR'): 104,100 => 2,855 rows (101,245 removed)
+2026-02-16 12:42:58,021 - INFO - Filter 2 (SpcfctnCd starts with 'DR2' or 'DR3'): 2,855 => 19 rows (2,836 removed)
+2026-02-16 12:42:58,022 - INFO - ================================================================================
+2026-02-16 12:42:58,022 - INFO - FILTERING SUMMARY:
+2026-02-16 12:42:58,022 - INFO -   Original rows:  104,100
+2026-02-16 12:42:58,023 - INFO -   Filtered rows:  19
+2026-02-16 12:42:58,023 - INFO -   Removed rows:   104,081
+2026-02-16 12:42:58,023 - INFO -   Retention rate: 0.02%
+2026-02-16 12:42:58,024 - INFO - ================================================================================
+2026-02-16 12:42:58,106 - WARNING - Missing columns: ['ConvsBsBldr']
+2026-02-16 12:42:58,106 - INFO - Available columns: ['RptDt', 'TckrSymb', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'XprtnDt', 'XprtnCd', 'TradgStartDt', 'TradgEndDt', 'BaseCd', 'ConvsCritNm', 'MtrtyDtTrgtPt', 'ReqrdConvsInd', 'ISIN', 'CFICd', 'DlvryNtceStartDt', 'DlvryNtceEndDt', 'OptnTp', 'CtrctMltplr', 'AsstQtnQty', 'AllcnRndLot', 'TradgCcy', 'DlvryTpNm', 'WdrwlDays', 'WrkgDays', 'ClnrDays', 'RlvrBasePricNm', 'OpngFutrPosDay', 'SdTpCd1', 'UndrlygTckrSymb1', 'SdTpCd2', 'UndrlygTckrSymb2', 'PureGoldWght', 'ExrcPric', 'OptnStyle', 'ValTpNm', 'PrmUpfrntInd', 'OpngPosLmtDt', 'DstrbtnId', 'PricFctr', 'DaysToSttlm', 'SrsTpNm', 'PrtcnFlg', 'AutomtcExrcInd', 'SpcfctnCd', 'CrpnNm', 'CorpActnStartDt', 'CtdyTrtmntTpNm', 'MktCptlstn', 'CorpGovnLvlNm']
+2026-02-16 12:42:58,107 - WARNING - Cannot extract 1 missing columns: ['ConvsBsBldr']
+2026-02-16 12:42:58,107 - INFO - Proceeding with available columns only
+2026-02-16 12:42:58,107 - INFO - Extracting 15 columns: ['TckrSymb', 'ISIN', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'SpcfctnCd', 'XprtnDt', 'XprtnCd', 'TradgStartDt', 'TradgEndDt', 'BaseCd', 'CrpnNm', 'CorpGovnLvlNm']
+2026-02-16 12:42:58,109 - INFO - Non-null values per column:
+2026-02-16 12:42:58,109 - INFO -   TckrSymb: 19 / 19 rows
+2026-02-16 12:42:58,109 - INFO -   ISIN: 19 / 19 rows
+2026-02-16 12:42:58,110 - INFO -   Asst: 19 / 19 rows
+2026-02-16 12:42:58,110 - INFO -   AsstDesc: 19 / 19 rows
+2026-02-16 12:42:58,110 - INFO -   SgmtNm: 19 / 19 rows
+2026-02-16 12:42:58,111 - INFO - After removing all-null rows: 19 rows remain
+2026-02-16 12:42:58,111 - INFO - Writing output to: InstrumentsConsolidated_filtered_20260216_124258.csv
+2026-02-16 12:42:58,111 - INFO - Using delimiter: ';'
+2026-02-16 12:42:58,115 - INFO - Successfully created output file (2,280 bytes)
+2026-02-16 12:42:58,116 - INFO - Output contains 19 rows and 15 columns
+2026-02-16 12:42:58,116 - INFO - ================================================================================
+2026-02-16 12:42:58,116 - INFO - Extraction completed SUCCESSFULLY
+2026-02-16 12:42:58,116 - INFO - ================================================================================
+2026-02-16 12:42:58,118 - INFO - Extraction completed successfully: processed\InstrumentsConsolidated_filtered_20260216_124258.csv
+2026-02-16 12:42:58,118 - INFO - Full job completed SUCCESSFULLY (download + extraction)
+2026-02-16 12:42:58,118 - INFO - ================================================================================
