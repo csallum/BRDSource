@@ -1,0 +1,41 @@
+2026-04-10 10:27:40,607 - INFO - ======================================================================
+2026-04-10 10:27:40,607 - INFO - Log Monitor starting at 2026-04-10 10:27:40
+2026-04-10 10:27:40,607 - INFO - Scan window: last 25 hours
+2026-04-10 10:27:40,608 - INFO - ======================================================================
+2026-04-10 10:27:40,623 - INFO - Scanned logs\anbima_download_202604.log: 62 lines checked, 1 issues found
+2026-04-10 10:27:40,624 - INFO - Scanned sec_13f_data\check_log.txt: 26 lines checked, 0 issues found
+2026-04-10 10:27:40,624 - INFO - Scan complete. Total issues found: 1
+2026-04-10 10:27:40,629 - WARNING - 1 issue(s) detected - sending alert email
+2026-04-10 10:27:48,222 - ERROR - SMTP authentication failed - check SMTP_USER and SMTP_PASSWORD
+2026-04-10 10:27:48,223 - ERROR - Alert email could not be sent - check SMTP configuration
+2026-04-10 10:27:48,224 - INFO - ======================================================================
+2026-04-10 10:33:21,407 - INFO - ======================================================================
+2026-04-10 10:33:21,408 - INFO - Log Monitor starting at 2026-04-10 10:33:21
+2026-04-10 10:33:21,408 - INFO - Scan window: last 25 hours
+2026-04-10 10:33:21,408 - INFO - ======================================================================
+2026-04-10 10:33:21,423 - INFO - Scanned logs\anbima_download_202604.log: 62 lines checked, 1 issues found
+2026-04-10 10:33:21,424 - INFO - Scanned sec_13f_data\check_log.txt: 26 lines checked, 0 issues found
+2026-04-10 10:33:21,425 - INFO - Scan complete. Total issues found: 1
+2026-04-10 10:33:21,425 - WARNING - 1 issue(s) detected - sending alert email
+2026-04-10 10:33:22,617 - INFO - Alert email sent to: csallum@gmail.com
+2026-04-10 10:33:22,617 - INFO - ======================================================================
+2026-04-10 10:33:49,046 - INFO - ======================================================================
+2026-04-10 10:33:49,047 - INFO - Log Monitor starting at 2026-04-10 10:33:49
+2026-04-10 10:33:49,047 - INFO - Scan window: last 25 hours
+2026-04-10 10:33:49,047 - INFO - ======================================================================
+2026-04-10 10:33:49,064 - INFO - Scanned logs\anbima_download_202604.log: 62 lines checked, 1 issues found
+2026-04-10 10:33:49,065 - INFO - Scanned sec_13f_data\check_log.txt: 26 lines checked, 0 issues found
+2026-04-10 10:33:49,065 - INFO - Scan complete. Total issues found: 1
+2026-04-10 10:33:49,066 - WARNING - 1 issue(s) detected - sending alert email
+2026-04-10 10:33:50,171 - INFO - Alert email sent to: csallum@gmail.com, helen.allum@gmail.com
+2026-04-10 10:33:50,172 - INFO - ======================================================================
+2026-04-10 10:36:34,968 - INFO - ======================================================================
+2026-04-10 10:36:34,968 - INFO - Log Monitor starting at 2026-04-10 10:36:34
+2026-04-10 10:36:34,969 - INFO - Scan window: last 25 hours
+2026-04-10 10:36:34,969 - INFO - ======================================================================
+2026-04-10 10:36:34,984 - INFO - Scanned logs\anbima_download_202604.log: 62 lines checked, 1 issues found
+2026-04-10 10:36:34,985 - INFO - Scanned sec_13f_data\check_log.txt: 26 lines checked, 0 issues found
+2026-04-10 10:36:34,985 - INFO - Scan complete. Total issues found: 1
+2026-04-10 10:36:34,986 - WARNING - 1 issue(s) detected - sending alert email
+2026-04-10 10:36:36,177 - INFO - Alert email sent to: csallum@gmail.com, angie.huff@kaizenreporting.com
+2026-04-10 10:36:36,178 - INFO - ======================================================================

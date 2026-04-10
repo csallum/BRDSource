@@ -1,270 +1,359 @@
 #!/usr/bin/env python3
 """
-By : Craig Allum
-Date : 24/02/2026
-Version : v1.0
-Purpose :
+================================================================================
+Module      : BrazilBDRListOnce.py
+Author      : Craig Allum
+Date        : 24/02/2026
+Version     : v1.1
+Description :
+    ANBIMA / B3 Instruments Consolidated Downloader - One-Shot Version.
 
-ANBIMA Cadastro de Instrumentos Downloader (One-shot version)
-Downloads the most recent Cadastro de Instrumentos (Listado)
-Then it automatically extracts columns after successful download
-Intended to to be used by calling it from cron scheduling
+    Performs a single download-and-extract cycle and exits with a standard
+    return code so that the outcome can be interrogated by the calling process.
+
+    This module is the preferred entry point when scheduling via cron or any
+    external job scheduler.  For a self-contained long-running process use
+    BrazilBDRList.py instead.
+
+    Exit codes:
+        0 - Download (and optional extraction) completed successfully.
+        1 - Download failed; no file was saved.
+
+Usage:
+    python BrazilBDRListOnce.py
+
+    Cron example (runs at 21:00 UK time daily):
+        0 21 * * * /usr/bin/python3 /opt/b3/BrazilBDRListOnce.py
+
+Dependencies:
+    requests, pytz, instruments_extractor (local module)
+================================================================================
 """
 
-import os
-import sys
 import logging
-import requests
+import sys
 from datetime import datetime, timedelta
 from pathlib import Path
-from bs4 import BeautifulSoup
+
 import pytz
+import requests
 
-# Configuration Information
-DOWNLOAD_DIR = Path("downloads")
-LOG_DIR = Path("logs")
-BASE_URL = "https://arquivos.b3.com.br/api/download"
-UK_TIMEZONE = pytz.timezone('Europe/London')
+# ---------------------------------------------------------------------------
+# Configuration
+# ---------------------------------------------------------------------------
 
-# Setup directories
+DOWNLOAD_DIR: Path = Path("downloads")
+LOG_DIR:      Path = Path("logs")
+BASE_URL:     str  = "https://arquivos.b3.com.br/api/download"
+UK_TIMEZONE         = pytz.timezone("Europe/London")
+
+# ---------------------------------------------------------------------------
+# Directory setup
+# ---------------------------------------------------------------------------
+
 DOWNLOAD_DIR.mkdir(exist_ok=True)
 LOG_DIR.mkdir(exist_ok=True)
 
-# Setup logging
-log_file = LOG_DIR / f"anbima_download_{datetime.now().strftime('%Y%m')}.log"
+# ---------------------------------------------------------------------------
+# Logging
+# ---------------------------------------------------------------------------
+
+_log_file = LOG_DIR / f"anbima_download_{datetime.now().strftime('%Y%m')}.log"
+
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
+    format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler(log_file),
-        logging.StreamHandler()
-    ]
+        logging.FileHandler(_log_file),
+        logging.StreamHandler(),
+    ],
 )
 logger = logging.getLogger(__name__)
 
-# Try to import the extractor module
+# ---------------------------------------------------------------------------
+# Optional extractor import
+# ---------------------------------------------------------------------------
+
 try:
-    from instruments_extractor import extract_columns, COLUMNS_TO_EXTRACT, EXTRACT_ALL_COLUMNS
+    from instruments_extractor import (
+        COLUMNS_TO_EXTRACT,
+        EXTRACT_ALL_COLUMNS,
+        extract_columns,
+    )
     EXTRACTOR_AVAILABLE = True
     logger.info("Instruments extractor module loaded successfully")
-except ImportError as e:
-    logger.warning(f"instruments_extractor module not found - extraction will be skipped: {e}")
+except ImportError as exc:
+    logger.warning(
+        "instruments_extractor module not found - extraction will be skipped: %s", exc
+    )
     EXTRACTOR_AVAILABLE = False
 
 
-def get_download_token(date_str):
+# ---------------------------------------------------------------------------
+# Token & file discovery
+# ---------------------------------------------------------------------------
+
+def get_download_token(date_str: str) -> tuple[str | None, str | None]:
+    """Request a one-time download token from the B3 API for a given date.
+
+    The B3 API requires a ``fileName`` and ``date`` parameter and returns a
+    short-lived token that must be used immediately to download the file.
+
+    Args:
+        date_str: ISO-formatted date string (``YYYY-MM-DD``) for which the
+            token should be requested.
+
+    Returns:
+        A ``(token, filename)`` tuple on success, or ``(None, None)`` if the
+        file is not available for that date or the request fails.
     """
-    Request a download token from B3 API for a specific date 
-    Returns (token, filename) tuple or (None, None) if not available
-    """
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "Accept": "application/json",
+    }
+    params = {
+        "fileName": "InstrumentsConsolidatedFile",
+        "date": date_str,
+        "recaptchaToken": "",
+    }
+
     try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-            'Accept': 'application/json',
-        }
-        
-        # Request token from B3 API
-        token_url = f"{BASE_URL}/requestname"
-        params = {
-            'fileName': 'InstrumentsConsolidatedFile',
-            'date': date_str,
-            'recaptchaToken': ''  
-        }
-        
-        logger.info(f"Requesting download token for date: {date_str}")
-        response = requests.get(token_url, headers=headers, params=params, timeout=30)
+        logger.info("Requesting download token for date: %s", date_str)
+        response = requests.get(
+            f"{BASE_URL}/requestname",
+            headers=headers,
+            params=params,
+            timeout=30,
+        )
         response.raise_for_status()
-        
         data = response.json()
-        
-        if 'token' in data and 'file' in data:
-            token = data['token']
-            filename = data['file']['name'] + data['file']['extension']
-            logger.info(f"Received token for file: {filename}")
+
+        if "token" in data and "file" in data:
+            token    = data["token"]
+            filename = data["file"]["name"] + data["file"]["extension"]
+            logger.info("Received token for file: %s", filename)
             return token, filename
-        else:
-            logger.warning(f"No token received for date: {date_str}")
-            return None, None
-            
-    except requests.RequestException as e:
-        logger.error(f"Failed to get download token: {e}")
+
+        logger.warning("No token received for date: %s", date_str)
         return None, None
-    except Exception as e:
-        logger.error(f"Error processing token response: {e}")
+
+    except requests.RequestException as exc:
+        logger.error("Failed to get download token: %s", exc)
+        return None, None
+    except Exception as exc:
+        logger.error("Unexpected error processing token response: %s", exc)
         return None, None
 
 
-def get_latest_file_token():
-    """
-    Tries to get a download token for today's file, falling back to previous days
-    Returns (token, filename, date_str) tuple or (None, None, None) if not found
+def get_latest_file_token() -> tuple[str | None, str | None, str | None]:
+    """Attempt to obtain a download token, falling back up to five previous days.
+
+    B3 files are not always published on weekends or public holidays, so this
+    function walks backwards through the last six calendar days until a valid
+    token is returned.
+
+    Returns:
+        A ``(token, filename, date_str)`` tuple on success, or
+        ``(None, None, None)`` if no file is available within the window.
     """
     try:
-        # Use UK timezone for consistency
         uk_now = datetime.now(UK_TIMEZONE)
-        
-        # Try today and up to 5 previous days
+
         for days_back in range(6):
             target_date = uk_now - timedelta(days=days_back)
-            date_str = target_date.strftime('%Y-%m-%d')
-            
+            date_str    = target_date.strftime("%Y-%m-%d")
             token, filename = get_download_token(date_str)
-            
+
             if token:
-                logger.info(f"Found available file for date: {date_str}")
+                logger.info("Found available file for date: %s", date_str)
                 return token, filename, date_str
-            else:
-                logger.info(f"File not available for {date_str}")
-        
+
+            logger.info("File not available for %s", date_str)
+
         logger.warning("No file found for the last 6 days")
         return None, None, None
-        
-    except Exception as e:
-        logger.error(f"Error getting latest file token: {e}")
+
+    except Exception as exc:
+        logger.error("Error getting latest file token: %s", exc)
         return None, None, None
 
 
-def download_file(token, filename):
+# ---------------------------------------------------------------------------
+# Download
+# ---------------------------------------------------------------------------
+
+def download_file(token: str, filename: str) -> Path | None:
+    """Download the instruments file using a previously obtained token.
+
+    A timestamp suffix is appended to the filename to prevent overwriting
+    previous downloads.  After download the file is sanity-checked to ensure
+    it is not an HTML error page masquerading as the data file.
+
+    Args:
+        token:    B3 API download token obtained from :func:`get_download_token`.
+        filename: Original filename returned by the token endpoint.
+
+    Returns:
+        The :class:`~pathlib.Path` to the saved file on success, or ``None``
+        if the download fails or the file fails validation.
     """
-    Downloads the file using the provided token
-    Returns the filepath if successful, None otherwise
-    """
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    }
+
     try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
-        
-        # Construct download URL with token
         download_url = f"{BASE_URL}/?token={token}"
-        
-        logger.info(f"Downloading file: {filename}")
-        logger.info(f"Download URL: {download_url}")
-        response = requests.get(download_url, headers=headers, timeout=120, stream=True)
+        logger.info("Downloading file: %s", filename)
+        logger.info("Download URL: %s", download_url)
+
+        response = requests.get(
+            download_url, headers=headers, timeout=120, stream=True
+        )
         response.raise_for_status()
-        
-        # Add timestamp to filename to avoid overwriting
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        name_parts = filename.rsplit('.', 1)
+
+        # Append a timestamp to avoid overwriting previous downloads
+        timestamp  = datetime.now().strftime("%Y%m%d_%H%M%S")
+        name_parts = filename.rsplit(".", 1)
         if len(name_parts) == 2:
-            filename_with_timestamp = f"{name_parts[0]}_{timestamp}.{name_parts[1]}"
+            timestamped_name = f"{name_parts[0]}_{timestamp}.{name_parts[1]}"
         else:
-            filename_with_timestamp = f"{filename}_{timestamp}"
-        
-        filepath = DOWNLOAD_DIR / filename_with_timestamp
-        
-        # Download file
-        total_size = 0
-        with open(filepath, 'wb') as f:
+            timestamped_name = f"{filename}_{timestamp}"
+
+        filepath = DOWNLOAD_DIR / timestamped_name
+
+        with open(filepath, "wb") as fh:
             for chunk in response.iter_content(chunk_size=8192):
                 if chunk:
-                    f.write(chunk)
-                    total_size += len(chunk)
-        
+                    fh.write(chunk)
+
         file_size = filepath.stat().st_size
-        logger.info(f"Successfully downloaded: {filename_with_timestamp} ({file_size:,} bytes)")
-        
-        # Verify it's actually a CSV/data file, not HTML error page
-        if file_size < 1000:
-            logger.warning(f"File size is suspiciously small ({file_size} bytes), checking content...")
-            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
-                content = f.read(500)
-                if '<html' in content.lower() or '<!doctype' in content.lower():
-                    logger.error("Downloaded file appears to be an HTML page, not the data file")
-                    return None
-        
+        logger.info(
+            "Successfully downloaded: %s (%s bytes)",
+            timestamped_name,
+            f"{file_size:,}",
+        )
+
+        # Sanity check: reject suspiciously small files and HTML error pages
+        if file_size < 1_000:
+            logger.warning(
+                "File size is suspiciously small (%s bytes) - checking content", file_size
+            )
+            with open(filepath, "r", encoding="utf-8", errors="ignore") as fh:
+                preview = fh.read(500)
+            if "<html" in preview.lower() or "<!doctype" in preview.lower():
+                logger.error(
+                    "Downloaded file appears to be an HTML error page, not the data file"
+                )
+                return None
+
         return filepath
-        
-    except requests.RequestException as e:
-        logger.error(f"Failed to download file: {e}")
+
+    except requests.RequestException as exc:
+        logger.error("Failed to download file: %s", exc)
         return None
-    except Exception as e:
-        logger.error(f"Error saving file: {e}")
+    except Exception as exc:
+        logger.error("Error saving downloaded file: %s", exc)
         return None
 
 
-def run_extraction(filepath):
-    """
-    Runs the column extraction on the downloaded file
-    Returns True if successful, False otherwise
+# ---------------------------------------------------------------------------
+# Extraction
+# ---------------------------------------------------------------------------
+
+def run_extraction(filepath: Path) -> bool:
+    """Invoke the column extractor on a downloaded instruments file.
+
+    Delegates to :func:`instruments_extractor.extract_columns` using the
+    column list and flags defined in that module's configuration section.
+
+    Args:
+        filepath: Path to the downloaded CSV file to be processed.
+
+    Returns:
+        ``True`` if extraction completed successfully, ``False`` otherwise.
     """
     if not EXTRACTOR_AVAILABLE:
-        logger.warning("Extractor not available - skipping extraction")
+        logger.warning("Extractor module not available - skipping extraction")
         return False
-    
+
     try:
         logger.info("=" * 80)
         logger.info("Starting automatic column extraction")
         logger.info("=" * 80)
-        
-        # Call the extractor with the specific file
+
         output_file = extract_columns(
             filepath,
             columns_to_extract=COLUMNS_TO_EXTRACT,
-            extract_all=EXTRACT_ALL_COLUMNS
+            extract_all=EXTRACT_ALL_COLUMNS,
         )
-        
+
         if output_file:
-            logger.info(f"Extraction completed successfully: {output_file}")
+            logger.info("Extraction completed successfully: %s", output_file)
             return True
-        else:
-            logger.error("Extraction failed - check extractor logs")
-            return False
-            
-    except Exception as e:
-        logger.error(f"Error during extraction: {e}")
+
+        logger.error("Extraction failed - check extractor logs for details")
+        return False
+
+    except Exception as exc:
+        logger.error("Unexpected error during extraction: %s", exc)
         return False
 
 
-def main():
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+
+def main() -> None:
+    """Orchestrate a single download-and-extract cycle then exit.
+
+    Acquires a download token, retrieves the file, and optionally invokes
+    the extractor.  Exits with code ``0`` on success or ``1`` on failure,
+    allowing the calling process (e.g. cron) to detect and act on errors.
     """
-    Main function that orchestrates the download and extraction process
-    """
-    uk_time = datetime.now(UK_TIMEZONE).strftime('%Y-%m-%d %H:%M:%S %Z')
-    logger.info("=" * 80)
-    logger.info(f"Starting B3 Instruments download job at {uk_time}")
-    logger.info("=" * 80)
-    
+    uk_time   = datetime.now(UK_TIMEZONE).strftime("%Y-%m-%d %H:%M:%S %Z")
     exit_code = 0
-    
+
+    logger.info("=" * 80)
+    logger.info("Starting B3 Instruments download job at %s", uk_time)
+    logger.info("=" * 80)
+
     try:
-        # Get the latest file token
         token, filename, date_str = get_latest_file_token()
-        
+
         if not token:
-            logger.error("Failed to get download token")
+            logger.error("Failed to obtain a download token")
+            logger.info("Job completed with FAILURE")
+            sys.exit(1)
+
+        downloaded_filepath = download_file(token, filename)
+
+        if downloaded_filepath:
+            logger.info("Download completed SUCCESSFULLY")
+
+            if run_extraction(downloaded_filepath):
+                logger.info("Full job completed SUCCESSFULLY (download + extraction)")
+            else:
+                # Extraction failure is treated as a warning; the downloaded
+                # file is still present and can be processed manually.
+                logger.warning("Download succeeded but extraction failed")
+
+        else:
+            logger.error("Download failed")
             logger.info("Job completed with FAILURE")
             exit_code = 1
-        else:
-            # Download the file using the token
-            downloaded_filepath = download_file(token, filename)
-            
-            if downloaded_filepath:
-                logger.info("Download completed SUCCESSFULLY")
-                
-                # Run extraction on the downloaded file
-                extraction_success = run_extraction(downloaded_filepath)
-                
-                if extraction_success:
-                    logger.info("Full job completed SUCCESSFULLY (download + extraction)")
-                    exit_code = 0
-                else:
-                    logger.warning("Download successful but extraction failed")
-                    # Still exit 0 since download succeeded
-                    # Change to exit_code = 2 if you want a different code for partial success
-                    exit_code = 0
-            else:
-                logger.error("Download failed")
-                logger.info("Job completed with FAILURE")
-                exit_code = 1
-            
-    except Exception as e:
-        logger.error(f"Unexpected error during job execution: {e}")
+
+    except Exception as exc:
+        logger.error("Unexpected error during job execution: %s", exc)
         logger.info("Job completed with FAILURE")
         exit_code = 1
-    
+
     logger.info("=" * 80)
     sys.exit(exit_code)
 
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     main()

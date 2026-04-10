@@ -1,0 +1,118 @@
+2026-04-10 10:26:27,292 - INFO - Instruments extractor module loaded successfully
+2026-04-10 10:26:27,292 - INFO - Scheduler initialized
+2026-04-10 10:26:27,293 - INFO - Download job scheduled for 21:00 (9pm) UK time daily
+2026-04-10 10:26:27,293 - INFO - Press Ctrl+C to stop
+2026-04-10 10:26:27,293 - INFO - Running initial download ...
+2026-04-10 10:26:27,294 - INFO - ================================================================================
+2026-04-10 10:26:27,295 - INFO - Starting B3 Instruments download job at 2026-04-10 10:26:27 BST
+2026-04-10 10:26:27,295 - INFO - ================================================================================
+2026-04-10 10:26:27,296 - INFO - Requesting download token for date: 2026-04-10
+2026-04-10 10:26:28,890 - INFO - Received token for file: InstrumentsConsolidatedFile_20260410_1.csv
+2026-04-10 10:26:28,893 - INFO - Found available file for date: 2026-04-10
+2026-04-10 10:26:28,894 - INFO - Downloading file: InstrumentsConsolidatedFile_20260410_1.csv
+2026-04-10 10:26:28,894 - INFO - Download URL: https://arquivos.b3.com.br/api/download/?token=SEVFQ3hNblc0RUpKc0ZjM3NMYjVaQT09VVpMTGQ5dlU5eWtsbnlnd0ZQNkhKUWMveUw2NTlCSkZsYkwxN1pQSnhIVmgzYnh6aU9XYjhMQVFWOVVCZFF4TmQ0NVVJNFoxaTZMc29LOUZ0MFJHSXNrbGI4enljbURZYlhlbWFVcDN0SFBmMEEzRFRhTTJtbmpxb083N2h2VlhmaDJXVnlkelNZOWNSUCtDTVRENU5Rd0dnRDg0Yk9IdHZqWUg4V1ExL0xVZG9ybW9VTER4elpLd3NHY01Gc2EvVXRNaFlpbmlRYlNTdkkxTFoybzVjVkhuNTJVMDZEOHpMUndjZkEzN3JWemxOdVo2U25wNUVYcTB4SUVNU28wTmRQbFhZYW9jS0VyRFBieFZPU2dqenc9PQ
+2026-04-10 10:26:39,048 - INFO - Successfully downloaded: InstrumentsConsolidatedFile_20260410_1_20260410_102629.csv (27,730,972 bytes)
+2026-04-10 10:26:39,051 - INFO - Download completed SUCCESSFULLY
+2026-04-10 10:26:39,051 - INFO - ================================================================================
+2026-04-10 10:26:39,051 - INFO - Starting automatic column extraction
+2026-04-10 10:26:39,052 - INFO - ================================================================================
+2026-04-10 10:26:39,052 - INFO - ================================================================================
+2026-04-10 10:26:39,053 - INFO - Starting column extraction from: InstrumentsConsolidatedFile_20260410_1_20260410_102629.csv
+2026-04-10 10:26:39,053 - INFO - ================================================================================
+2026-04-10 10:26:39,053 - INFO - Reading input CSV file...
+2026-04-10 10:26:39,054 - INFO - Detected metadata header: Status do Arquivo: Parcial
+2026-04-10 10:26:39,055 - INFO - Detected delimiter: ';' (count in header: 51)
+2026-04-10 10:26:39,057 - WARNING - Failed with encoding utf-8: 'utf-8' codec can't decode byte 0xc1 in position 957: invalid start byte
+2026-04-10 10:26:40,799 - INFO - Successfully read file with encoding: latin-1, delimiter: ';'
+2026-04-10 10:26:40,800 - INFO - Input file contains 122,784 rows and 52 columns
+2026-04-10 10:26:40,800 - INFO - First 10 columns: ['RptDt', 'TckrSymb', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'XprtnDt', 'XprtnCd', 'TradgStartDt']
+2026-04-10 10:26:41,015 - INFO - Applying filters...
+2026-04-10 10:26:41,108 - INFO - Filter 1 (SctyCtgyNm contains 'BDR'): 122,784 => 2,848 rows (119,936 removed)
+2026-04-10 10:26:41,112 - INFO - Filter 2 (SpcfctnCd starts with 'DR2' or 'DR3'): 2,848 => 19 rows (2,829 removed)
+2026-04-10 10:26:41,113 - INFO - ================================================================================
+2026-04-10 10:26:41,113 - INFO - FILTERING SUMMARY:
+2026-04-10 10:26:41,113 - INFO -   Original rows:  122,784
+2026-04-10 10:26:41,113 - INFO -   Filtered rows:  19
+2026-04-10 10:26:41,113 - INFO -   Removed rows:   122,765
+2026-04-10 10:26:41,114 - INFO -   Retention rate: 0.02%
+2026-04-10 10:26:41,114 - INFO - ================================================================================
+2026-04-10 10:26:41,171 - WARNING - Missing columns: ['ConvsBsBldr']
+2026-04-10 10:26:41,172 - INFO - Available columns: ['RptDt', 'TckrSymb', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'XprtnDt', 'XprtnCd', 'TradgStartDt', 'TradgEndDt', 'BaseCd', 'ConvsCritNm', 'MtrtyDtTrgtPt', 'ReqrdConvsInd', 'ISIN', 'CFICd', 'DlvryNtceStartDt', 'DlvryNtceEndDt', 'OptnTp', 'CtrctMltplr', 'AsstQtnQty', 'AllcnRndLot', 'TradgCcy', 'DlvryTpNm', 'WdrwlDays', 'WrkgDays', 'ClnrDays', 'RlvrBasePricNm', 'OpngFutrPosDay', 'SdTpCd1', 'UndrlygTckrSymb1', 'SdTpCd2', 'UndrlygTckrSymb2', 'PureGoldWght', 'ExrcPric', 'OptnStyle', 'ValTpNm', 'PrmUpfrntInd', 'OpngPosLmtDt', 'DstrbtnId', 'PricFctr', 'DaysToSttlm', 'SrsTpNm', 'PrtcnFlg', 'AutomtcExrcInd', 'SpcfctnCd', 'CrpnNm', 'CorpActnStartDt', 'CtdyTrtmntTpNm', 'MktCptlstn', 'CorpGovnLvlNm']
+2026-04-10 10:26:41,172 - WARNING - Cannot extract 1 missing columns: ['ConvsBsBldr']
+2026-04-10 10:26:41,172 - INFO - Proceeding with available columns only
+2026-04-10 10:26:41,172 - INFO - Extracting 15 columns: ['TckrSymb', 'ISIN', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'SpcfctnCd', 'XprtnDt', 'XprtnCd', 'TradgStartDt', 'TradgEndDt', 'BaseCd', 'CrpnNm', 'CorpGovnLvlNm']
+2026-04-10 10:26:41,176 - INFO - Non-null values per column:
+2026-04-10 10:26:41,176 - INFO -   TckrSymb: 19 / 19 rows
+2026-04-10 10:26:41,176 - INFO -   ISIN: 19 / 19 rows
+2026-04-10 10:26:41,177 - INFO -   Asst: 19 / 19 rows
+2026-04-10 10:26:41,177 - INFO -   AsstDesc: 19 / 19 rows
+2026-04-10 10:26:41,178 - INFO -   SgmtNm: 19 / 19 rows
+2026-04-10 10:26:41,179 - INFO - After removing all-null rows: 19 rows remain
+2026-04-10 10:26:41,179 - INFO - Writing output to: InstrumentsConsolidated_filtered_20260410_102641.csv
+2026-04-10 10:26:41,179 - INFO - Using delimiter: ';'
+2026-04-10 10:26:41,187 - INFO - Successfully created output file (2,280 bytes)
+2026-04-10 10:26:41,187 - INFO - Output contains 19 rows and 15 columns
+2026-04-10 10:26:41,187 - INFO - ================================================================================
+2026-04-10 10:26:41,187 - INFO - Extraction completed SUCCESSFULLY
+2026-04-10 10:26:41,187 - INFO - ================================================================================
+2026-04-10 10:26:41,188 - INFO - Extraction completed successfully: processed\InstrumentsConsolidated_filtered_20260410_102641.csv
+2026-04-10 10:26:41,189 - INFO - Full job completed SUCCESSFULLY (download + extraction)
+2026-04-10 10:26:41,189 - INFO - ================================================================================
+2026-04-10 10:27:23,586 - INFO - 
+Scheduler stopped by user
+2026-04-10 11:03:03,817 - INFO - Instruments extractor module loaded successfully
+2026-04-10 11:03:03,818 - INFO - ================================================================================
+2026-04-10 11:03:03,818 - INFO - Starting B3 Instruments download job at 2026-04-10 11:03:03 BST
+2026-04-10 11:03:03,818 - INFO - ================================================================================
+2026-04-10 11:03:03,818 - INFO - Requesting download token for date: 2026-04-10
+2026-04-10 11:03:05,768 - INFO - Received token for file: InstrumentsConsolidatedFile_20260410_1.csv
+2026-04-10 11:03:05,770 - INFO - Found available file for date: 2026-04-10
+2026-04-10 11:03:05,770 - INFO - Downloading file: InstrumentsConsolidatedFile_20260410_1.csv
+2026-04-10 11:03:05,770 - INFO - Download URL: https://arquivos.b3.com.br/api/download/?token=Q05veCsyV2J1Y3QweVlSNTRPeEsydz09VGZsbW9objE2ZHRWcUNkVVJWTUYrZXJKMzJZQUhobUs1aHB1bldyYnVqK1pmcFpXWlRtSVRiNmQ5Mjl3WFYyOTU1dWdSOUpDSlE2T0tkeDA2dE1MaklQMkRvcVkwRVBseEpBRFNELytGL25aZVR3WFlKeFBSVHJiZHRsVmhMTEtxNnBYemNUUndhZTgxd1hiSDZsSmprcnZKOW0xUDQ1b1VRK1JGb0RGaHRWVXl3SWFTclR3Zll0RTR1N0lJUzg1SlJyd080am9sQWZUaW83OWtad0xGUkJqbUo3ZUx0T05WK1FNVW04V2pkdmF4YllESWhtNVZ6Z05BMEJ4THpxbHRIZEZxclk3RHRWME9oa2dGMWYxTWc9PQ
+2026-04-10 11:03:17,266 - INFO - Successfully downloaded: InstrumentsConsolidatedFile_20260410_1_20260410_110306.csv (27,730,972 bytes)
+2026-04-10 11:03:17,268 - INFO - Download completed SUCCESSFULLY
+2026-04-10 11:03:17,268 - INFO - ================================================================================
+2026-04-10 11:03:17,268 - INFO - Starting automatic column extraction
+2026-04-10 11:03:17,268 - INFO - ================================================================================
+2026-04-10 11:03:17,268 - INFO - ================================================================================
+2026-04-10 11:03:17,269 - INFO - Starting column extraction from: InstrumentsConsolidatedFile_20260410_1_20260410_110306.csv
+2026-04-10 11:03:17,269 - INFO - ================================================================================
+2026-04-10 11:03:17,269 - INFO - Reading input CSV file...
+2026-04-10 11:03:17,269 - INFO - Detected metadata header: Status do Arquivo: Parcial
+2026-04-10 11:03:17,270 - INFO - Detected delimiter: ';' (count in header: 51)
+2026-04-10 11:03:17,272 - WARNING - Failed with encoding utf-8: 'utf-8' codec can't decode byte 0xc1 in position 957: invalid start byte
+2026-04-10 11:03:19,168 - INFO - Successfully read file with encoding: latin-1, delimiter: ';'
+2026-04-10 11:03:19,169 - INFO - Input file contains 122,784 rows and 52 columns
+2026-04-10 11:03:19,169 - INFO - First 10 columns: ['RptDt', 'TckrSymb', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'XprtnDt', 'XprtnCd', 'TradgStartDt']
+2026-04-10 11:03:19,413 - INFO - Applying filters...
+2026-04-10 11:03:19,517 - INFO - Filter 1 (SctyCtgyNm contains 'BDR'): 122,784 => 2,848 rows (119,936 removed)
+2026-04-10 11:03:19,521 - INFO - Filter 2 (SpcfctnCd starts with 'DR2' or 'DR3'): 2,848 => 19 rows (2,829 removed)
+2026-04-10 11:03:19,522 - INFO - ================================================================================
+2026-04-10 11:03:19,522 - INFO - FILTERING SUMMARY:
+2026-04-10 11:03:19,522 - INFO -   Original rows:  122,784
+2026-04-10 11:03:19,522 - INFO -   Filtered rows:  19
+2026-04-10 11:03:19,523 - INFO -   Removed rows:   122,765
+2026-04-10 11:03:19,523 - INFO -   Retention rate: 0.02%
+2026-04-10 11:03:19,524 - INFO - ================================================================================
+2026-04-10 11:03:19,577 - WARNING - Missing columns: ['ConvsBsBldr']
+2026-04-10 11:03:19,577 - INFO - Available columns: ['RptDt', 'TckrSymb', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'XprtnDt', 'XprtnCd', 'TradgStartDt', 'TradgEndDt', 'BaseCd', 'ConvsCritNm', 'MtrtyDtTrgtPt', 'ReqrdConvsInd', 'ISIN', 'CFICd', 'DlvryNtceStartDt', 'DlvryNtceEndDt', 'OptnTp', 'CtrctMltplr', 'AsstQtnQty', 'AllcnRndLot', 'TradgCcy', 'DlvryTpNm', 'WdrwlDays', 'WrkgDays', 'ClnrDays', 'RlvrBasePricNm', 'OpngFutrPosDay', 'SdTpCd1', 'UndrlygTckrSymb1', 'SdTpCd2', 'UndrlygTckrSymb2', 'PureGoldWght', 'ExrcPric', 'OptnStyle', 'ValTpNm', 'PrmUpfrntInd', 'OpngPosLmtDt', 'DstrbtnId', 'PricFctr', 'DaysToSttlm', 'SrsTpNm', 'PrtcnFlg', 'AutomtcExrcInd', 'SpcfctnCd', 'CrpnNm', 'CorpActnStartDt', 'CtdyTrtmntTpNm', 'MktCptlstn', 'CorpGovnLvlNm']
+2026-04-10 11:03:19,578 - WARNING - Cannot extract 1 missing column(s): ['ConvsBsBldr']
+2026-04-10 11:03:19,579 - INFO - Proceeding with available columns only
+2026-04-10 11:03:19,579 - INFO - Extracting 15 column(s): ['TckrSymb', 'ISIN', 'Asst', 'AsstDesc', 'SgmtNm', 'MktNm', 'SctyCtgyNm', 'SpcfctnCd', 'XprtnDt', 'XprtnCd', 'TradgStartDt', 'TradgEndDt', 'BaseCd', 'CrpnNm', 'CorpGovnLvlNm']
+2026-04-10 11:03:19,586 - INFO - Non-null values per column (first 5 shown):
+2026-04-10 11:03:19,587 - INFO -   TckrSymb: 19 / 19 rows
+2026-04-10 11:03:19,587 - INFO -   ISIN: 19 / 19 rows
+2026-04-10 11:03:19,588 - INFO -   Asst: 19 / 19 rows
+2026-04-10 11:03:19,588 - INFO -   AsstDesc: 19 / 19 rows
+2026-04-10 11:03:19,588 - INFO -   SgmtNm: 19 / 19 rows
+2026-04-10 11:03:19,590 - INFO - After removing all-null rows: 19 rows remain
+2026-04-10 11:03:19,590 - INFO - Writing output to: InstrumentsConsolidated_filtered_20260410_110319.csv
+2026-04-10 11:03:19,590 - INFO - Using delimiter: ';'
+2026-04-10 11:03:19,595 - INFO - Successfully created output file (2,280 bytes)
+2026-04-10 11:03:19,595 - INFO - Output contains 19 rows and 15 columns
+2026-04-10 11:03:19,596 - INFO - ================================================================================
+2026-04-10 11:03:19,596 - INFO - Extraction completed SUCCESSFULLY
+2026-04-10 11:03:19,596 - INFO - ================================================================================
+2026-04-10 11:03:19,597 - INFO - Extraction completed successfully: processed\InstrumentsConsolidated_filtered_20260410_110319.csv
+2026-04-10 11:03:19,598 - INFO - Full job completed SUCCESSFULLY (download + extraction)
+2026-04-10 11:03:19,598 - INFO - ================================================================================

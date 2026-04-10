@@ -1,0 +1,8 @@
+# Run BrazilBDR download at 9pm UK time daily
+0 21 * * * /usr/bin/python3 /path/to/BrazilBDRListOnce.py
+
+# Run log monitor 30 mins later to catch any failures
+30 21 * * * /usr/bin/python3 /path/to/log_monitor.py
+
+# Run 13F monitor on the 28th of each month at 10am
+0 10 28 * * /usr/bin/python3 /path/to/13Fmonitor.py
